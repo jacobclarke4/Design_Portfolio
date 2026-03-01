@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+/* ── Design tokens ────────────────────────────── */
+/* ── Root vars (for browser colour picker) ───── */
+:root {
+  --primary-color: #ffd328;
+  --accent-color: #f5b9c3;
+  --color-navy: #3b3a8e;
+  --color-navy-dark: #2b2a6e;
+  --color-muted: #666666;
+  --color-border: #e8e8f0;
+}
+
+@theme {
+  --font-display: 'DM Sans', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --color-primary: var(--primary-color);
+  --color-accent: var(--accent-color);
+  --color-navy: #3b3a8e;
+  --color-navy-dark: #2b2a6e;
+  --color-muted: #666666;
+  --color-border: #e8e8f0;
+}
+
+/* ── Gradient text utility ────────────────────── */
+@utility text-gradient {
+  background: linear-gradient(90deg, var(--accent-color) 0%, var(--primary-color) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Global base ──────────────────────────────── */
+body {
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Keyframes ────────────────────────────────── */
+@keyframes blobReveal {
+  from {
+    transform: translateY(-50%) scale(7.5);
+    filter: blur(0px);
+  }
+  to {
+    transform: translateY(-50%) scale(1);
+    filter: blur(45px);
+  }
+}
+
+@keyframes blobFade {
+  from { opacity: 1; }
+  to   { opacity: 0.75; }
+}
+
+@keyframes blobScreenCover {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
