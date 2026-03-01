@@ -1,3 +1,4 @@
+import LoadingScreen from './components/LoadingScreen'
 import Hero from './components/Hero'
 import Bio from './components/Bio'
 import ContactForm from './components/ContactForm'
@@ -30,6 +31,7 @@ export default function App() {
 
   return (
     <>
+      <LoadingScreen />
       <Hero />
       <Bio />
       <TableOfContents />

@@ -44,7 +44,7 @@ body {
   }
   to {
     transform: translateY(-50%) scale(1);
-    filter: blur(45px);
+    filter: blur(60px);
   }
 }
 
@@ -56,6 +56,12 @@ body {
 @keyframes blobScreenCover {
   from { opacity: 1; }
   to   { opacity: 0; }
+}
+
+@keyframes loaderGradient {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 @keyframes fadeInUp {

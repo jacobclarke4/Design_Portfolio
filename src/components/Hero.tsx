@@ -16,36 +16,9 @@ export default function Hero() {
       className="relative w-full overflow-hidden bg-white flex items-center"
       style={{ height: '100vh' }}
     >
-      {/* Full-screen cover — same gradient, fades out as blob shrinks */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background: fixedGradient,
-          backgroundAttachment: 'fixed',
-          animation: 'blobScreenCover 2.8s cubic-bezier(0.22, 1, 0.36, 1) both',
-        }}
-      />
-
-      {/* Gradient blob — full-screen on load, shrinks to right */}
-      <div
-        className="absolute pointer-events-none"
-        style={{
-          top: '50%',
-          right: '-18%',
-          width: '58%',
-          height: '110%',
-          background: fixedGradient,
-          backgroundAttachment: 'fixed',
-          WebkitMaskImage:
-            'radial-gradient(ellipse 55% 75% at 45% 50%, black 0%, black 20%, transparent 70%)',
-          maskImage:
-            'radial-gradient(ellipse 55% 75% at 45% 50%, black 0%, black 20%, transparent 70%)',
-          animation: 'blobReveal 2.8s cubic-bezier(0.22, 1, 0.36, 1) both, blobFade 1s ease-out 2.8s both',
-        }}
-      />
-
-      <div className="relative z-10 w-full px-[5vw]">
-        {/* Row 1: Name | 2026 */}
+      <div className="relative z-10 w-full flex justify-center">
+        <div className="flex flex-col items-start">
+        {/* Row 1: Name | 2026 — left-aligned above the P in PORTFOLIO */}
         <p
           className="font-display font-semibold tracking-[0.18em] uppercase leading-none"
           style={{
@@ -59,13 +32,44 @@ export default function Hero() {
           2026
         </p>
 
-        {/* Row 2: PORTFOLIO massive */}
+        {/* PORT stays gradient; FOLIO is white — blob lives inside the span
+            so CSS left/top 50% always hits the exact rendered center */}
         <h1
           className="font-display font-black leading-none tracking-[-0.02em]"
-          style={{ fontSize: 'clamp(58px, 13.5vw, 210px)', ...textStyle }}
+          style={{ fontSize: 'clamp(58px, 13.5vw, 210px)' }}
         >
-          PORTFOLIO
+          <span style={textStyle}>PORT</span>
+          <span
+            style={{
+              color: 'white',
+              display: 'inline-block',
+              position: 'relative',
+              isolation: 'isolate',
+            }}
+          >
+            FOLIO
+            <div
+              className="pointer-events-none"
+              style={{
+                position: 'absolute',
+                left: '50%',
+                top: '50%',
+                width: '44vw',
+                height: '90vh',
+                background: fixedGradient,
+                WebkitMaskImage:
+                  'radial-gradient(ellipse 70% 60% at 50% 50%, black 0%, black 5%, transparent 98%)',
+                maskImage:
+                  'radial-gradient(ellipse 70% 60% at 50% 50%, black 0%, black 5%, transparent 98%)',
+                transform: 'translate(-50%, -50%)',
+                filter: 'blur(60px)',
+                opacity: 0.85,
+                zIndex: -1,
+              }}
+            />
+          </span>
         </h1>
+        </div>
       </div>
     </section>
   )
