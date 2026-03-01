@@ -31,7 +31,7 @@ const projects: Project[] = [
     accentColor: '#1E3A2A',
     tools: ['Ai', 'Ps'],
     description:
-      'My personal logo is the representation of my name, "Hanieh", crafted using Persian calligraphy. The design reflects a fusion of traditional Persian elements with a modern and minimalist aesthetic.',
+      'My personal logo is the representation of my name, "Sasha", crafted using Persian calligraphy. The design reflects a fusion of traditional Persian elements with a modern and minimalist aesthetic.',
     gridLayout: '3-col',
     // 3-col: all items are square (1:1) → 600×600
     images: [
