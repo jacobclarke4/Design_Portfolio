@@ -32,7 +32,7 @@ const ANIM_43: AnimType[] = ['left', 'up', 'scale', 'right',   // row 1 (4)
 
 function Grid3Col({ images }: { images: ProjectImage[] }) {
   return (
-    <div className="grid grid-cols-3 w-full" style={{ gap: GAP }}>
+    <div className="grid grid-cols-2 sm:grid-cols-3 w-full" style={{ gap: GAP }}>
       {images.map((img, i) => (
         <FadeIn key={i} delay={i * 70} anim={ANIM_3[i] ?? 'up'} className={`${CARD} aspect-square`}>
           <Img image={img} />
@@ -46,14 +46,14 @@ function Grid4x3({ images }: { images: ProjectImage[] }) {
   const top = images.slice(0, 4)
   const bottom = images.slice(4, 7)
   return (
-    <div className="grid grid-cols-12 w-full" style={{ gap: GAP }}>
+    <div className="grid grid-cols-2 sm:grid-cols-12 w-full" style={{ gap: GAP }}>
       {top.map((img, i) => (
-        <FadeIn key={i} delay={i * 70} anim={ANIM_43[i]} className={`col-span-3 aspect-square ${CARD}`}>
+        <FadeIn key={i} delay={i * 70} anim={ANIM_43[i]} className={`col-span-1 sm:col-span-3 aspect-square ${CARD}`}>
           <Img image={img} />
         </FadeIn>
       ))}
       {bottom.map((img, i) => (
-        <FadeIn key={i + 4} delay={(i + 4) * 70} anim={ANIM_43[i + 4]} className={`col-span-4 aspect-4/3 ${CARD}`}>
+        <FadeIn key={i + 4} delay={(i + 4) * 70} anim={ANIM_43[i + 4]} className={`col-span-1 sm:col-span-4 aspect-4/3 ${CARD}`}>
           <Img image={img} />
         </FadeIn>
       ))}
@@ -66,8 +66,8 @@ function GridFeature({ images }: { images: ProjectImage[] }) {
   // Side images alternate right → scale → right so the stack feels varied
   const sideAnims: AnimType[] = ['right', 'scale', 'right']
   return (
-    <div className="grid w-full" style={{ gridTemplateColumns: '1fr 1.6fr', gap: GAP }}>
-      <FadeIn delay={0} anim="left" className={`${CARD} min-h-90`}>
+    <div className="grid w-full grid-cols-1 sm:grid-cols-[1fr_1.6fr]" style={{ gap: GAP }}>
+      <FadeIn delay={0} anim="left" className={`${CARD} sm:min-h-90`}>
         <Img image={featured} />
       </FadeIn>
 

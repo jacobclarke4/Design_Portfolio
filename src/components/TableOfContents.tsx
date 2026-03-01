@@ -27,7 +27,7 @@ export default function TableOfContents() {
           </h2>
         </FadeIn>
 
-        <div className="grid grid-cols-2" style={{ gap: '0' }}>
+        <div className="grid grid-cols-1 sm:grid-cols-2" style={{ gap: '0' }}>
           {ALL_CATEGORIES.map((cat, i) => (
             <FadeIn key={cat.number} delay={i * 80} anim={i % 2 === 0 ? 'left' : 'right'}>
               <div

@@ -68,7 +68,7 @@ function InstagramPost() {
     <div
       className="bg-white flex flex-col"
       style={{
-        width: 'clamp(280px, 28vw, 400px)',
+        width: 'clamp(260px, 70vw, 400px)',
         borderRadius: 12,
         border: '1px solid #dbdbdb',
         boxShadow: '0 8px 40px rgba(0,0,0,0.10)',
@@ -139,7 +139,7 @@ function InstagramPost() {
 export default function Bio() {
   return (
     <section className="relative border-t border-border overflow-hidden">
-      <div className="flex items-stretch min-h-[80vh]">
+      <div className="flex flex-col md:flex-row items-stretch md:min-h-[80vh]">
 
         {/* Left: text content */}
         <div className="flex-1 flex flex-col justify-center px-[5vw] py-20 relative">
@@ -186,8 +186,7 @@ export default function Bio() {
 
         {/* Right: Instagram post + gradient blob */}
         <div
-          className="relative shrink-0 flex items-center justify-center"
-          style={{ width: 'clamp(320px, 44vw, 660px)', padding: '4rem 3rem' }}
+          className="relative shrink-0 flex items-center justify-center w-full md:w-[clamp(320px,44vw,660px)] py-12 px-8 md:py-16 md:px-12"
         >
           {/* Gradient blob — behind the card */}
           <div

@@ -12,8 +12,8 @@ export default function ProjectSection({ project }: Props) {
   return (
     <section className="py-20 px-[5vw] border-t border-border">
       {/* Header row animates in first */}
-      <FadeIn className="flex justify-between items-start gap-8 mb-10">
-        <div className="max-w-130">
+      <FadeIn className="flex flex-col sm:flex-row justify-between items-start gap-6 mb-10">
+        <div className="w-full sm:max-w-130">
           <h2
             className="font-semibold text-[#1a1a2e] mb-2.5"
             style={{ fontSize: 'clamp(20px, 2.4vw, 32px)' }}
