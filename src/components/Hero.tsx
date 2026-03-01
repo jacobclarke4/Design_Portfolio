@@ -16,11 +16,22 @@ export default function Hero() {
       className="relative w-full overflow-hidden bg-white flex items-center"
       style={{ height: '100vh' }}
     >
+      {/* Mobile only: name pinned to top of section */}
+      <p
+        className="sm:hidden absolute top-64 left-0 right-0 text-center z-10
+                   font-display font-semibold tracking-[0.18em] uppercase leading-none"
+        style={{ fontSize: '18px', ...textStyle }}
+      >
+        SASHA GRANGER
+        <span style={{ fontWeight: 300, padding: '0 0.5em' }}>|</span>
+        2026
+      </p>
+
       <div className="relative z-10 w-full flex justify-center">
         <div className="flex flex-col items-start">
-        {/* Row 1: Name | 2026 — left-aligned above the P in PORTFOLIO */}
+        {/* Desktop only: name left-aligned above PORTFOLIO */}
         <p
-          className="font-display font-semibold tracking-[0.18em] uppercase leading-none"
+          className="hidden sm:block font-display font-semibold tracking-[0.18em] uppercase leading-none"
           style={{
             fontSize: 'clamp(13px, 1.8vw, 28px)',
             marginBottom: '0.2em',
@@ -49,19 +60,14 @@ export default function Hero() {
           >
             FOLIO
             <div
-              className="pointer-events-none"
+              className="pointer-events-none w-[45vmin] h-[45vmin] sm:w-[70vmin] sm:h-[70vmin]"
               style={{
                 position: 'absolute',
                 left: '50%',
                 top: '50%',
-                width: '44vw',
-                height: '90vh',
+                borderRadius: '50%',
                 background: fixedGradient,
-                WebkitMaskImage:
-                  'radial-gradient(ellipse 70% 60% at 50% 50%, black 0%, black 5%, transparent 98%)',
-                maskImage:
-                  'radial-gradient(ellipse 70% 60% at 50% 50%, black 0%, black 5%, transparent 98%)',
-                filter: 'blur(60px)',
+                filter: 'blur(72px)',
                 opacity: 0.85,
                 zIndex: -1,
                 animation:

@@ -111,19 +111,11 @@ function InstagramPost() {
 
 export default function Bio() {
   return (
-    <section className="relative border-t border-border overflow-hidden">
+    <section className="relative  overflow-hidden">
       <div className="flex flex-col md:flex-row items-stretch md:min-h-[80vh]">
 
         {/* Left: text content */}
         <div className="flex-1 flex flex-col justify-center px-[5vw] py-20 relative">
-          <span
-            className="absolute font-display font-black leading-none select-none pointer-events-none"
-            style={{ fontSize: 'clamp(90px, 16vw, 220px)', color: 'var(--color-navy)', opacity: 0.04, top: '0.5rem', left: 'calc(5vw - 0.05em)' }}
-            aria-hidden
-          >
-            Hello!
-          </span>
-
           <FadeIn>
             <h2 className="font-display font-black text-gradient leading-none" style={{ fontSize: 'clamp(44px, 7vw, 96px)', marginBottom: '0.45em' }}>
               Hello!
