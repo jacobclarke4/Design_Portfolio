@@ -28,33 +28,6 @@ function BehanceIcon() {
   )
 }
 
-function NavyMailIcon() {
-  return (
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: 'var(--color-navy)', flexShrink: 0 }}>
-      <rect x="2" y="4" width="20" height="16" rx="2" />
-      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-    </svg>
-  )
-}
-
-function NavyLinkedInIcon() {
-  return (
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="var(--color-navy)" style={{ flexShrink: 0 }}>
-      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-      <rect x="2" y="9" width="4" height="12" />
-      <circle cx="4" cy="4" r="2" />
-    </svg>
-  )
-}
-
-function NavyBehanceIcon() {
-  return (
-    <svg width="20" height="18" viewBox="0 0 24 24" fill="var(--color-navy)" style={{ flexShrink: 0 }}>
-      <path d="M22 7h-7V5h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14H15.97c.13 3.211 3.483 3.312 4.588 2.029H23.726zm-7.726-3h3.957c-.005-1.09-.868-1.977-2.026-1.977-1.32 0-1.869.845-1.931 1.977zM6.756 14h2.805c1.517 0 2.29-.705 2.29-1.979 0-1.219-.687-1.949-2.29-1.949H6.756V14zm0-5.5h2.604c1.297 0 1.972-.61 1.972-1.725 0-1.222-.755-1.775-1.972-1.775H6.756V8.5zM2 19V5h7.682c2.283 0 4.214 1.13 4.214 3.498 0 1.426-.705 2.477-1.895 3.054C13.383 12.04 14 13.3 14 14.876 14 17.542 12.055 19 9.432 19H2z" />
-    </svg>
-  )
-}
-
 function DotsIcon() {
   return (
     <svg width="20" height="20" viewBox="0 0 24 24" fill="#262626">
@@ -202,7 +175,7 @@ export default function Bio() {
             }}
           />
 
-          <FadeIn anim="right" style={{ position: 'relative', zIndex: 1 }}>
+          <FadeIn anim="right" className="relative z-1">
             <InstagramPost />
           </FadeIn>
         </div>
