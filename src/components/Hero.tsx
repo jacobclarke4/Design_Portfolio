@@ -61,10 +61,11 @@ export default function Hero() {
                   'radial-gradient(ellipse 70% 60% at 50% 50%, black 0%, black 5%, transparent 98%)',
                 maskImage:
                   'radial-gradient(ellipse 70% 60% at 50% 50%, black 0%, black 5%, transparent 98%)',
-                transform: 'translate(-50%, -50%)',
                 filter: 'blur(60px)',
                 opacity: 0.85,
                 zIndex: -1,
+                animation:
+                  'blobScale 1.4s cubic-bezier(0.22, 1, 0.36, 1) 3.8s both',
               }}
             />
           </span>

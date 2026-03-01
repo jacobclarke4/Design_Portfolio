@@ -64,6 +64,11 @@ body {
   100% { background-position: 0% 50%; }
 }
 
+@keyframes blobScale {
+  from { transform: translate(-50%, -50%) scale(0); }
+  to   { transform: translate(-50%, -50%) scale(1); }
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
